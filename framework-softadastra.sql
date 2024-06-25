@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 26 juin 2024 à 00:39
+-- Généré le : mer. 26 juin 2024 à 01:02
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -34,6 +34,20 @@ CREATE TABLE `tbl_articles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Déchargement des données de la table `tbl_articles`
+--
+
+INSERT INTO `tbl_articles` (`id`, `title`, `content`) VALUES
+(1, 'article 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officiis minima earum ea consequatur? Minus culpa excepturi commodi nobis, quisquam eligendi incidunt magnam ipsa suscipit saepe eveniet, ipsum error neque in fugit vel ullam! Modi suscipit repellendus debitis placeat aut sapiente saepe sunt expedita et ab? Enim totam maxime iure harum necessitatibus tempore. Asperiores, est neque provident saepe ducimus nisi!'),
+(2, 'article 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officiis minima earum ea consequatur? Minus culpa excepturi commodi nobis, quisquam eligendi incidunt magnam ipsa suscipit saepe eveniet, ipsum error neque in fugit vel ullam! Modi suscipit repellendus debitis placeat aut sapiente saepe sunt expedita et ab? Enim totam maxime iure harum necessitatibus tempore. Asperiores, est neque provident saepe ducimus nisi!'),
+(3, 'article 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officiis minima earum ea consequatur? Minus culpa excepturi commodi nobis, quisquam eligendi incidunt magnam ipsa suscipit saepe eveniet, ipsum error neque in fugit vel ullam! Modi suscipit repellendus debitis placeat aut sapiente saepe sunt expedita et ab? Enim totam maxime iure harum necessitatibus tempore. Asperiores, est neque provident saepe ducimus nisi!'),
+(4, 'article 4', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officiis minima earum ea consequatur? Minus culpa excepturi commodi nobis, quisquam eligendi incidunt magnam ipsa suscipit saepe eveniet, ipsum error neque in fugit vel ullam! Modi suscipit repellendus debitis placeat aut sapiente saepe sunt expedita et ab? Enim totam maxime iure harum necessitatibus tempore. Asperiores, est neque provident saepe ducimus nisi!'),
+(5, 'article 5', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officiis minima earum ea consequatur? Minus culpa excepturi commodi nobis, quisquam eligendi incidunt magnam ipsa suscipit saepe eveniet, ipsum error neque in fugit vel ullam! Modi suscipit repellendus debitis placeat aut sapiente saepe sunt expedita et ab? Enim totam maxime iure harum necessitatibus tempore. Asperiores, est neque provident saepe ducimus nisi!'),
+(6, 'aricle 6', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officiis minima earum ea consequatur? Minus culpa excepturi commodi nobis, quisquam eligendi incidunt magnam ipsa suscipit saepe eveniet, ipsum error neque in fugit vel ullam! Modi suscipit repellendus debitis placeat aut sapiente saepe sunt expedita et ab? Enim totam maxime iure harum necessitatibus tempore. Asperiores, est neque provident saepe ducimus nisi!'),
+(7, 'article 7', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officiis minima earum ea consequatur? Minus culpa excepturi commodi nobis, quisquam eligendi incidunt magnam ipsa suscipit saepe eveniet, ipsum error neque in fugit vel ullam! Modi suscipit repellendus debitis placeat aut sapiente saepe sunt expedita et ab? Enim totam maxime iure harum necessitatibus tempore. Asperiores, est neque provident saepe ducimus nisi!'),
+(8, 'article 8', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officiis minima earum ea consequatur? Minus culpa excepturi commodi nobis, quisquam eligendi incidunt magnam ipsa suscipit saepe eveniet, ipsum error neque in fugit vel ullam! Modi suscipit repellendus debitis placeat aut sapiente saepe sunt expedita et ab? Enim totam maxime iure harum necessitatibus tempore. Asperiores, est neque provident saepe ducimus nisi!');
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -51,7 +65,7 @@ ALTER TABLE `tbl_articles`
 -- AUTO_INCREMENT pour la table `tbl_articles`
 --
 ALTER TABLE `tbl_articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
