@@ -36,12 +36,21 @@ class App
     {
         $url = isset($_GET['url']) ? $_GET['url'] : '/';
         $router = new Router($url);
-        $router = require_once dirname(dirname(__DIR__)) . '/App/routes.php';
+
+        // Chargez les routes depuis le fichier web.php
+        require_once dirname(dirname(__DIR__)) . '/routes/web.php';
 
         try {
+            // Exécutez le routeur
             $router->run();
         } catch (NotFoundException $e) {
-            return $e->error404();
+            // Gérez les exceptions NotFound ici
+            $response = new \Softadastra\Http\Response('<html><body><h1>404 Not Found</h1><p>' . $e->getMessage() . '</p></body></html>', 404, ['Content-Type' => 'text/html']);
+            $response->send();
+        } catch (\Exception $e) {
+            // Gérez les autres exceptions ici
+            $response = new \Softadastra\Http\Response('<html><body><h1>500 Internal Server Error</h1><p>' . $e->getMessage() . '</p></body></html>', 500, ['Content-Type' => 'text/html']);
+            $response->send();
         }
     }
 }

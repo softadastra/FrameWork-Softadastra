@@ -15,7 +15,6 @@ use App\Meta\ManagerHeadPage;
 </head>
 
 <body>
-
     <?= $content ?>
 </body>
 

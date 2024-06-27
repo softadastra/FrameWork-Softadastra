@@ -4,6 +4,7 @@ namespace Softadastra\Core\Router;
 
 use Softadastra\Configurations\Database;
 use Softadastra\Exception\InvalidArticleIdException;
+use Softadastra\Http\Response;
 
 class Route
 {
@@ -49,14 +50,15 @@ class Route
                 return $controller->$method();
             }
         } catch (InvalidArticleIdException $e) {
-            $this->renderErrorPage($e->getMessage());
+            return $this->renderErrorPage($e->getMessage());
         } catch (\Exception $e) {
-            $this->renderErrorPage("An unexpected error occurred.");
+            return $this->renderErrorPage("An unexpected error occurred.");
         }
     }
 
-    private function renderErrorPage()
+    private function renderErrorPage($message)
     {
-        require dirname(dirname(dirname(__DIR__))) . '/views/errors/articleId.php';
+        $content = '<html><body><h1>Error</h1><p>' . htmlspecialchars($message) . '</p></body></html>';
+        return new Response($content, 400, ['Content-Type' => 'text/html']);
     }
 }

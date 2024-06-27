@@ -2,8 +2,6 @@
 
 namespace App\Controllers;
 
-use Softadastra\Configurations\Database;
-
 class Controller
 {
     public function view(string $path, array $params = null)

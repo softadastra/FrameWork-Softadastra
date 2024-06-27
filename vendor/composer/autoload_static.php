@@ -53,7 +53,7 @@ class ComposerStaticInitc475e170ebcce977a9f06d03520a01ee
         ),
         'Softadastra\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/framework',
         ),
         'PhpOption\\' => 
         array (
@@ -69,7 +69,7 @@ class ComposerStaticInitc475e170ebcce977a9f06d03520a01ee
         ),
         'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/App',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

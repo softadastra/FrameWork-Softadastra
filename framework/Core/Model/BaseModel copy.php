@@ -39,7 +39,7 @@ abstract class BaseModel
 
     public function findAll()
     {
-        $stmt = $this->pdo->query("SELECT * FROM {$this->table}");
+        $stmt = $this->pdo->query("SELECT * FROM {$this->table}LIMIT 0,2");
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return array_map(function ($result) {
             $entity = new EntityModel();

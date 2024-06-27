@@ -2,8 +2,8 @@
     "name": "softadastra.com/e-commerce",
     "autoload": {
         "psr-4": {
-            "App\\": "App/",
-            "Softadastra\\": "src/"
+            "App\\": "src/",
+            "Softadastra\\": "framework/"
         }
     },
     "authors": [
